@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+<div class="container">
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active">FindMe</a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <!-- <div class="collapse navbar-collapse" id="navbarCollapse"> This functionality moves the login form to the side of the navbar-->
+
+      <ul class="navbar-nav mr-auto">
+        <ng-container *ngIf="accuntServices.currentUser$ | async">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/members" routerLinkActive="active">Matches<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/lists" routerLinkActive="active">Lists</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
+          </li>
+        </ng-container>
+      </ul>
+
+      <div class="dropdown" *ngIf="(accuntServices.currentUser$ | async) as user" dropdown>
+          <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username | titlecase}}</a>
+          <div class="dropdown-menu mt-3" *bsDropdownMenu>
+              <a class="dropdown-item">Edit Profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="logout()">logout</a>
+          </div>
+      </div>
+
+      <form *ngIf="(accuntServices.currentUser$ | async) === undefined || (accuntServices.currentUser$ | async) === null" #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off">
+        <input
+        name="username"
+        [(ngModel)]="model.username"
+        class="form-control mr-sm-2"
+        type="text"
+        placeholder="username"
+        aria-label="username">
+
+        <input
+        name="password"
+        [(ngModel)]="model.password"
+        class="form-control mr-sm-2"
+        type="password"
+        placeholder="password"
+        aria-label="password">
+
+        <button class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+      </form>
+    </div>
+<!-- </div> -->
+</nav>
