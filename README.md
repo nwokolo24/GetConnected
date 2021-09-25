@@ -41,3 +41,20 @@ MAJOR REFACTORING FOR CONSTELLATION:
 -- appsettings.Development.json
     - DefaultConnection database name
     - TokenKey
+
+WANT TO IMPROVE UPON THIS PROJECT?
+-- Here are a lists of functionalities that can be added to this project
+   -- Delete User: This feature should enable users to completely delete their account.
+
+
+DATA FLOW PIPELINE
+
+    WEB Server
+        |
+    Controller
+        |
+    Repository (layer of abstraction)
+        |
+    DbContext
+        |
+    Database
