@@ -1,0 +1,16 @@
+Implementing components that make up the user interface
+-- Used Typscript types
+-- Used angular interceptors and JWT tokens
+-- Used bootstrap for styling
+-- Used basic css tricks to enhance the look
+-- Used a 3rd party photo gallery tool (Ngx gallery)
+-- Used Routing params
+
+
+Implementing Persistence
+-- Angular Template forms
+-- Angular CanDeactive Router Guard
+-- Angular @ViewChild Decorator
+-- Persisting changes to the API
+-- Adding loading indicators to the client app
+-- Caching data in Angular services
