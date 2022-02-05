@@ -14,3 +14,17 @@ Implementing Persistence
 -- Persisting changes to the API
 -- Adding loading indicators to the client app
 -- Caching data in Angular services
+
+Implementing Photo Upload functionality
+-- Photo storage options
+-- Adding related entities
+-- Using a 3rd party API
+-- Using the Debugger 
+-- Updating and deleting resources
+-- What to return when creating resources in a REST based API
+
+Photo upload control using cloudinary coud services
+-- Client uploads photo to API with JWT
+-- Server uploads the photo to cloudinary
+-- Cloudinary stores the photo and sends a response
+-- API saves photo URL and pblic ID to DB

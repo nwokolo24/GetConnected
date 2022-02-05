@@ -58,3 +58,26 @@ DATA FLOW PIPELINE
     DbContext
         |
     Database
+
+
+LIST OF VSCODE EXTENSION
+-- .Net install Tool for Extension Authos
+-- Angular Essentials
+-- Angualar Language Service
+-- Angular Snippets
+-- Beautify
+-- Bracket Pair Colorizer
+-- C#
+-- C# Extensions by JosKreativ
+-- Docker
+-- HTML BoilerPlate
+-- HTML CSS Support
+-- Material Icon Theme
+-- npm
+-- NuGet Gallery
+-- Prettier
+-- Visual Studio IntelliCode
+
+VsCode Settings
+-- C# Extension enable import
+
