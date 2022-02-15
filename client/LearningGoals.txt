@@ -28,3 +28,43 @@ Photo upload control using cloudinary coud services
 -- Server uploads the photo to cloudinary
 -- Cloudinary stores the photo and sends a response
 -- API saves photo URL and pblic ID to DB
+
+
+Implementing more advanced forms using Reactive Forms in Angular
+-- Use Reactive Forms
+-- Use Angular Validation for inputs
+-- Implementing custom validators
+-- Implementing reusable form controls
+-- Working with Date inputs
+
+Implementing paging, sorting, and filtering
+-- How to implement pagination on the API and Client
+-- Deffered Execution using IQueryable
+-- How implement filtering on the API and client
+-- How to implement sorting on the API and client
+-- Using Action filters
+-- Adding a TimeAgo pipe
+-- Implement caching in the client for apginated resources
+PAGINATION 
+- Helps avoid performance problems
+- Parameters are passed by query string eg: https://localhost:5001/api/users?pageNumber=1&pageSize=5
+- Page size should be limited
+- We should always page results
+DEFERRED EXECUTION 
+example:
+IQueryable<User>
+var query = context.Users 
+    .Where(x => x.Gender == gender)
+    .OrderBy(x => x.UserName)
+    .Take(5)
+    .Skip(5)
+    .AsQuaryable()
+Nothing executes above
+Execution:
+query.ToListAsync()
+query.ToArrayAsync()
+query.ToDictionary()
+
+query.Count()
+The codes above is what actually sends a request to our database
+
