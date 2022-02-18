@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using API.Extensions;
+using Microsoft.AspNetCore.Identity;
 
 namespace API.Entities
 {
-    public class AppUsers
+    public class AppUsers : IdentityUser<int>
     {
         public int Id { get; set; }
         public string Username { get; set; }
@@ -22,9 +23,9 @@ namespace API.Entities
         public string Country { get; set; }
         public ICollection<Photo> Photos { get; set; }
 
-        // public int GetAge() {
-        //     return DateOfBirth.CalculateAge();
-        // }
-        
+        public ICollection<UserLike> LikedByUsers { get; set; }
+        public ICollection<UserLike> LikedUsers { get; set; }
+        public ICollection<Message> MessageSent { get; set; }
+        public ICollection<Message> MessageReceived { get; set; }
     }
 }

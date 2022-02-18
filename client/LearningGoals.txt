@@ -68,3 +68,36 @@ query.ToDictionary()
 query.Count()
 The codes above is what actually sends a request to our database
 
+Date: 2/14/2022
+Implementing the Like User functionality
+-- Manay to many relationships
+    -- AppUser --> (can be liked by many, can like many) --> AppUser
+-- Configuring entities in the DbContext
+    -- UserLike Table
+        --SourceUserId
+        --LikedUserId
+Using Fluent API
+AppUser --> (Has One) --> SourceUser --> (With Many) --> LikedUsers
+AppUser --> (Has one) --> LikedUser --> (With Many) --> LikedByUsers
+
+Implementing the Messaging functionality and gain and understanding of the following:
+-- More many to many to many relationships
+-- Using query params in angular
+
+Refactoring our code to use ASP.NEt Identity and gain a undersatind of the following:
+-- Using .Net Identity
+-- Role management
+-- Policy based authorisation
+-- UserManager<T>
+-- SigningManager<T>
+-- RoleManager<T>
+
+REASONS
+-- Battle hardened, written and tested by Mircrosoft
+-- Comes with a password hasher with 10,000 salt iterations
+-- Full framework for managing members and roles
+-- Provides an Entity framework schema to create the needed tables
+-- Highly customisable
+
+Expectations
+--
