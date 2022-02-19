@@ -19,7 +19,7 @@ namespace API.Controllers
             return "secret text";
         }
         [HttpGet("not-found")]
-        public ActionResult<AppUsers> GetNotFound() {
+        public ActionResult<AppUser> GetNotFound() {
             var thing = _context.Users.Find(-1);
             if (thing == null) return NotFound();
 
@@ -36,7 +36,7 @@ namespace API.Controllers
         }
 
         [HttpGet("bad-request")]
-        public ActionResult<AppUsers> GetBadRequest() {
+        public ActionResult<AppUser> GetBadRequest() {
             return BadRequest("This is not a good request");
         }
         

@@ -1,6 +1,6 @@
 [
   {
-    "Username": "Bridgette",
+    "UserName": "Bridgette",
     "Gender": "female",
     "DateOfBirth": "1953-06-01",
     "KnownAs": "Bridgette",
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "Username": "Lily",
+    "UserName": "Lily",
     "Gender": "female",
     "DateOfBirth": "1976-05-25",
     "KnownAs": "Lily",
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "Username": "James",
+    "UserName": "James",
     "Gender": "female",
     "DateOfBirth": "1991-06-08",
     "KnownAs": "James",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "Username": "Milagros",
+    "UserName": "Milagros",
     "Gender": "female",
     "DateOfBirth": "1957-08-02",
     "KnownAs": "Milagros",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "Username": "Kirsten",
+    "UserName": "Kirsten",
     "Gender": "female",
     "DateOfBirth": "1962-05-06",
     "KnownAs": "Kirsten",
@@ -95,7 +95,7 @@
     ]
   },
     {
-      "Username": "Mcneil",
+      "UserName": "Mcneil",
       "Gender": "male",
       "DateOfBirth": "1980-04-12",
       "KnownAs": "Mcneil",
@@ -114,7 +114,7 @@
       ]
     },
     {
-      "Username": "Boyle",
+      "UserName": "Boyle",
       "Gender": "male",
       "DateOfBirth": "1979-09-02",
       "KnownAs": "Boyle",
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "Username": "Wong",
+      "UserName": "Wong",
       "Gender": "male",
       "DateOfBirth": "1969-09-12",
       "KnownAs": "Wong",
@@ -152,7 +152,7 @@
       ]
     },
     {
-      "Username": "William",
+      "UserName": "William",
       "Gender": "male",
       "DateOfBirth": "1987-11-28",
       "KnownAs": "William",
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "Username": "Martinez",
+      "UserName": "Martinez",
       "Gender": "male",
       "DateOfBirth": "1952-06-25",
       "KnownAs": "Martinez",

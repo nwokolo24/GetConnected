@@ -11,7 +11,7 @@ namespace API.Interfaces
     public interface ILikesRepository
     {
         Task<UserLike> GetUserLike(int sourceUserId, int likedUserId);
-        Task<AppUsers> GetUserWithLikes(int userId);
+        Task<AppUser> GetUserWithLikes(int userId);
         Task<PageList<LikeDto>> GetUserLikes(LikesParams likesParams);
     }
 }
