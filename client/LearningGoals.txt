@@ -122,3 +122,10 @@ Features
     -- Server-sent events
     -- Long polling
 -- Offers client side npm package
+
+
+Implementing Unit of work pattern and gain and understanding of the following
+-- The Unit of work pattern
+-- Optimising queries to the DB
+-- Adding a confirm dialog service
+-- Finishing touches
