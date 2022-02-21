@@ -99,5 +99,26 @@ REASONS
 -- Provides an Entity framework schema to create the needed tables
 -- Highly customisable
 
-Expectations
---
+Implementing SignalR into our application and understand how to
+-- Use and set up SignalR on both the API and Client
+-- Implement online presence
+-- Implement live chat between users
+
+
+What is SignalR
+-- Open Source library that provides real-time web functionality to apps
+-- Good for:
+  -- Dashboards and monitoring apps
+  -- Collaborative apps
+  -- Apps that require notifications
+  -- Chat apps
+
+Features
+-- Handles connection management automatically
+-- Sends messages to all connected clients simultaneously
+-- Sends messages to specific clients or groups of clients
+-- Supports:
+    -- WebSockets
+    -- Server-sent events
+    -- Long polling
+-- Offers client side npm package
