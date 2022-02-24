@@ -132,3 +132,12 @@ Implementing Unit of work pattern and gain and understanding of the following
  
 What is Unit of work?
 Unit of work maintains a list of objects affected by a business transaction and coordinates the writing of changes
+
+
+PhotoUpload Management Implementation
+-- Any photos a user uploads should be unapproved
+-- Only admins or modearators can approve photos
+-- No other user should be able to see unapproved photos
+-- The user that uploaded the photo should be able to see the photo but it should be clearly indentified as "Awaiting approval"
+-- When a user uploads their first photo this should not be set as their main photo
+-- When an admin or moderator approves a photo for a user that does not have a main photo then this should set the photo to main

@@ -1,3 +1,4 @@
+using System;
 using API.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -9,17 +10,19 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Data
 {
     public class DataContext : IdentityDbContext<AppUser, AppRole, int,
-        IdentityUserClaim<int>, AppUserRole,
-        IdentityUserLogin<int>, IdentityRoleClaim<int>,
-        IdentityUserToken<int>>
+        IdentityUserClaim<int>, AppUserRole, IdentityUserLogin<int>,
+        IdentityRoleClaim<int>, IdentityUserToken<int>>
     {
         public DataContext(DbContextOptions options) : base(options)
         {
         }
+
         public DbSet<UserLike> Likes { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Photo> Photos { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Connection> Connections { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -36,6 +39,7 @@ namespace API.Data
                 .HasForeignKey(ur => ur.RoleId)
                 .IsRequired();
 
+
             builder.Entity<UserLike>()
                 .HasKey(k => new { k.SourceUserId, k.LikedUserId });
 
@@ -43,7 +47,6 @@ namespace API.Data
                 .HasOne(s => s.SourceUser)
                 .WithMany(l => l.LikedUsers)
                 .HasForeignKey(s => s.SourceUserId)
-                // .OnDelete(DeleteBehavior.NoAction);
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<UserLike>()
@@ -62,25 +65,26 @@ namespace API.Data
                 .WithMany(m => m.MessageSent)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder.Entity<Photo>().HasQueryFilter(p => p.IsApproved);
+
             builder.ApplyUtcDateTimeConverter();
         }
     }
-
 
     public static class UtcDateAnnotation
     {
         private const String IsUtcAnnotation = "IsUtc";
         private static readonly ValueConverter<DateTime, DateTime> UtcConverter =
-            new ValueConverter<DateTime, DateTime>(v => v, v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
+          new ValueConverter<DateTime, DateTime>(v => v, v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
 
         private static readonly ValueConverter<DateTime?, DateTime?> UtcNullableConverter =
-            new ValueConverter<DateTime?, DateTime?>(v => v, v => v == null ? v : DateTime.SpecifyKind(v.Value, DateTimeKind.Utc));
+          new ValueConverter<DateTime?, DateTime?>(v => v, v => v == null ? v : DateTime.SpecifyKind(v.Value, DateTimeKind.Utc));
 
         public static PropertyBuilder<TProperty> IsUtc<TProperty>(this PropertyBuilder<TProperty> builder, Boolean isUtc = true) =>
-            builder.HasAnnotation(IsUtcAnnotation, isUtc);
+          builder.HasAnnotation(IsUtcAnnotation, isUtc);
 
         public static Boolean IsUtc(this IMutableProperty property) =>
-            ((Boolean?)property.FindAnnotation(IsUtcAnnotation)?.Value) ?? true;
+          ((Boolean?)property.FindAnnotation(IsUtcAnnotation)?.Value) ?? true;
 
         /// <summary>
         /// Make sure this is called after configuring all your entities.
