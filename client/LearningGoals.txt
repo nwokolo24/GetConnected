@@ -129,3 +129,6 @@ Implementing Unit of work pattern and gain and understanding of the following
 -- Optimising queries to the DB
 -- Adding a confirm dialog service
 -- Finishing touches
+ 
+What is Unit of work?
+Unit of work maintains a list of objects affected by a business transaction and coordinates the writing of changes
