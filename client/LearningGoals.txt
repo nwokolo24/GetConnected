@@ -141,3 +141,22 @@ PhotoUpload Management Implementation
 -- The user that uploaded the photo should be able to see the photo but it should be clearly indentified as "Awaiting approval"
 -- When a user uploads their first photo this should not be set as their main photo
 -- When an admin or moderator approves a photo for a user that does not have a main photo then this should set the photo to main
+
+
+
+Publishing our application
+-- Prepare the app for publication
+-- What to consider before Publishing
+-- Switching DBs
+-- Serving static content from the API Server
+-- Publishing to Heroku
+-- Integrating Heroku into Github
+-- Using git branches
+
+What to consider when publishing 
+-- Environment variable
+-- localhost
+-- CORS - if hosting the client app in different domain
+-- Database 
+-- Cost 
+-- Capacity / scalability
