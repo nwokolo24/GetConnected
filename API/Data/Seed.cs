@@ -33,7 +33,7 @@ namespace API.Data
                 // using var hmac = new HMACSHA512();
                 user.Photos.First().IsApproved = true;
                 user.UserName = user.UserName.ToLower();
-                await userManager.CreateAsync(user, "24$$hello");
+                await userManager.CreateAsync(user, "Pa$$w0rd");
                 await userManager.AddToRoleAsync(user, "Member");
             }
 
@@ -42,7 +42,7 @@ namespace API.Data
                 UserName = "admin"
             };
 
-            await userManager.CreateAsync(admin, "24$$hello");
+            await userManager.CreateAsync(admin, "Pa$$w0rd");
             await userManager.AddToRolesAsync(admin, new[] {"Admin", "Moderator"});
         }
     }
