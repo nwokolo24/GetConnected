@@ -457,3 +457,4 @@ $RECYCLE.BIN/
 appsettings.json
 StudentAssets
 __MACOSX
+Data/Seed.cs
