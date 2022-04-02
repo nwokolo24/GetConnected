@@ -1,6 +1,10 @@
 # GetConnected
 > Find people who are looking for you...
 
+Here is the link to the working website: [Campusnetapp.com](https://campusnetapp.herokuapp.com)
+
+**Note:** Because we used free Heroku web hosting, when you try visiting this site for the first time, it might take 3-5 seconds to load but after that, it should be fine. This reason for this is that after some period of inactivity in this web app, heroku puts the app to sleep. This is just a configuration that applied to Heroku's free hosting service
+
 # Introduction
 This was a project I came up with for my CIT 380 class (Project Management). I chose this project because of the interest I had in learning about the working principles of web applications. I also had interest in learning the C# language and Microsoft .NET and Entityframework. Angular was used for the front end. While this web app may not render well in a mobile device, it still works well when you use a desktop or laptop device. The goal was to come up with an MVP project within a semester while learning about project management skills and documentation.
 
